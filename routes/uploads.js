@@ -119,7 +119,7 @@ route.post("/uploads",function(req ,res, next){
                         console.log(err);
                     }else{
                         //render the view again 
-                        console.log(req.body);   
+                        // console.log(req.body);   
                         res.redirect("/uploads");
         
                     }

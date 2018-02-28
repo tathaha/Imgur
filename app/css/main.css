@@ -1,0 +1,7 @@
+.container{
+  display: grid;
+  /* create a grid with twelve columns, each being one fraction unit wide (1/12 of the total width). */
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 50px 50px 350px ;
+  grid-gap: 5px;
+}

@@ -11,7 +11,7 @@
     "node",
     "express"
   ],
-  "author": "aldocaava",
+  "author": "siddhu",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",

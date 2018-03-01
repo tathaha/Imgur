@@ -1,7 +1,62 @@
+ body{
+  margin: 0px ;
+  border: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #f2f2f2;
+  width: 100%;
+
+}
+/* .wrap{
+ margin: 0px ;
+ border: 0;
+ padding: 0;
+ font-size: 14px;
+ background-color: #141518;
+ width: 100%;
+
+} */
 .container{
+  width: 100%;
+  margin-left: -200px ;
+  border: 0px;
+  top: 0;
+  left: 0;
+  background-color: #141518;
   display: grid;
   /* create a grid with twelve columns, each being one fraction unit wide (1/12 of the total width). */
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 50px 50px 350px ;
-  grid-gap: 5px;
+  grid-template-rows: 66px 67px 800px ;
+  grid-template-areas:
+           "m m m m m m m m m m m m"
+           "h h h h h h h h h h h h"
+           "c c c c c c c c c c c c";
+}
+menu > div:nth-child(1){
+  grid-column: 3;
+}
+.section{
+  border: 2px solid black;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin: 0;
+}
+.menu {
+    display: flex;
+    width: 100%;
+    background-color: #34373c;
+    grid-area: m;
+}
+.header {
+    grid-area: h;
+}
+.content {
+
+  background-color: #2c2f34;
+    grid-area: c;
+}
+.logo{
+  font-family: 'Open Sans';
+  font-size: 40px;
+  padding-left: 10px;
 }

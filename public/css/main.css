@@ -1,6 +1,6 @@
 body{
-    background: #111;
-    color: aliceblue;
+    background: rgba(255, 255, 255, 0.886);
+    color: rgb(0, 0, 0);
     font-family: "Passion One", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
@@ -9,7 +9,7 @@ body{
 }
 
 .container h1 {
-    color: #04FF5C;
+    color: rgb(0, 0, 0);
     font-size: 4rem;
     padding: 0;
     margin: 0;

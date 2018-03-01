@@ -2,6 +2,7 @@ const express = require("express");
 const route = express.Router();
 // we need the file system to delete the images.
 const fs = require("fs"); 
+const uuid = require('uuid');
 
 
 //import mongoose
@@ -17,6 +18,8 @@ const upload = require("../multer/storage");
 
 //Model
 const Image = require("../models/images");
+
+var image_id = uuid.v4();
 
 
 
@@ -135,7 +138,16 @@ route.post("/uploads",function(req ,res, next){
  
 });
 
-
+route.post('/images/:id',function(req, res){
+    Image.findById(req.params.id, function(err, image){
+        
+               res.render('image', {
+                 image:image
+                
+               });
+               console.log(image.image);
+       });
+   });
 
 //export the module
 module.exports = route;

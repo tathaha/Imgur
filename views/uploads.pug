@@ -7,5 +7,7 @@ block content
         div.imagesContainer
             each image in images
                 div.image(id=image.id)
-                    div.delete Delete
-                    img(src=image.image)
+                   
+                    a(href="/images/"+image._id) 
+                        div.delete Delete
+                        img(src=image.image)

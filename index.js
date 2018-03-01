@@ -1,6 +1,7 @@
 const express = require("express");
 const server = express();
 
+
 //other imports
 const path = require("path");
 const bodyParser= require("body-parser");
@@ -21,13 +22,20 @@ const uploads = require("./routes/uploads");
 //main public folder
 server.use(express.static("./public"));
 //uploads Multer folder
-server.use(express.static("./uploads"));
+server.use(express.static("./uploads/"));
 
 //set the view engine to PUG
 server.set("views", path.join(__dirname,"views"));
 server.set("view engine", "pug");
 
-
+// server.get('/images/:id', function(req, res){
+//     Links.findById(req.params.id, function(err, articles){
+        
+//                res.render('article', {
+//                  articles:articles
+//                });
+//        });
+//    });
 
 //add the routes
 server.use("/", main);

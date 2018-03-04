@@ -5,6 +5,7 @@
   font-size: 14px;
   color: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
+  background-color: #141518;
 }
 
 #menu {
@@ -28,10 +29,10 @@
 }
 .content {
   display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: repeat(4,350px);
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-rows: repeat(4,210px);
   padding: 20px;
+  margin: 0 60px 0 60px;
   background-color: #2c2f34;
 }
 .content > div > img {
@@ -45,21 +46,26 @@
   font-size: 40px;
   font-size: 10px;
   font-family: 'Open Sans', sans-serif;
-  margin-left: 130px;
+  margin-left: 20px;
 }
-.brand-logo{
-  width: 50px;
-  height: 50px;
-}
-.btn{
-  margin-left: 100px;
-  background-color: #1bb763;
-  height: 23px;
-  width: 129px;
-}
-.arrow{
-  margin-left: 120px;
-}
-.arrow:hover{
 
+.btn{
+  height: 23px;
+  width: 200px;
+}
+ .post{
+
+ }
+
+
+.card{
+   width: 170px;
+   height:210px;
+}
+.card:hover{
+   box-shadow: 0 20px 20px 5px; 
+   
+}
+.imgurlogo{
+padding-top: 10px;
 }

@@ -6,10 +6,7 @@ block content
         p
             a(href="/uploads") Uploaded files.
             #{msg}
-        form(action="/uploads" method="POST" enctype="multipart/form-data" )
-           
-            input(type="file" name="image" )  
-            input(type="submit" value="upload")
+      
 
         div.error
             if(error != null)

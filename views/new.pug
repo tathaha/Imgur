@@ -1,0 +1,71 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title imgur
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js')
+    //
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    link(rel='stylesheet', href='/app/css/main.css')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    // Import materialize.css
+    link(type='text/css', rel='stylesheet', href='/app/css/materialize.min.css', media='screen,projection')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+  //- script(src="./scripts/jquery-3.3.1.min.js")
+    //- script(src="./scripts/functions.js")
+  body
+    // <div class="container">
+    #menu
+      nav
+        .nav-wrapper
+          .logo
+            ul#nav-mobile.left.hide-on-med-and-down
+              li
+                a.imgurlogo(href='')
+                  img(src='./app/images/imgur_logo_pack/imgur-logo-transparent.png', height='42', width='120', alt='')
+              li
+                i.large.material-icons.arrow arrow_drop_down
+              li
+              form(action="/new" method="POST" enctype="multipart/form-data")
+                input(type="file" name="image" )
+                input.waves-effect.waves-light.btn.post(type='submit',value='upload', style='height: 44px')
+          ul#nav-mobile.right.hide-on-med-and-down
+            li
+              a(href='sass.html')
+                i.material-icons.left search
+            li
+              a(href='badges.html') sign in
+            li
+              a(href='collapsible.html') sign up
+    .header.section
+      span.before-text The
+      span.name
+        a(href='') Most Viral
+      span.middle-text images on the Internet, sorted by
+      span.selection
+        a(href='') popularity
+    .content
+      .card
+        img(src='./app/images/demo/snowpiercer.jpg', alt='')
+      .card
+        img(src='./app/images/demo/law_abiding_citizen.jpg', alt='')
+      .card
+        img(src='./app/images/demo/Fight_club.jpg', alt='')
+      .card
+        img(src='./app/images/demo/rio.jpg', alt='')
+      .card
+        img(src='./app/images/demo/real_steel.jpg', alt='')
+      .card
+        each image in images
+          image(id=image.id)
+              div.delete Delete
+              img(src=image.image)
+   
+    script(type='text/javascript', src='https://code.jquery.com/jquery-3.2.1.min.js')
+    script(type='text/javascript', src='/app/js/materialize.min.js')
+    script(type='text/javascript', src='/scripts/jquery-3.3.1.min.js')
+    script(type='text/javascript', src='/scripts/functions.js')
+   

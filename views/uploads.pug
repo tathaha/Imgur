@@ -4,10 +4,9 @@ block content
         h2 Uploaded Files.
         p
             a(href="/") Go back.
-        div.imagesContainer
+      div.imagesContainer
             each image in images
                 div.image(id=image.id)
-                   
-                    a(href="/images/"+image._id) 
-                        div.delete Delete
-                        img(src=image.image)
+                    div.delete Delete
+                    img(src=image.image)
+

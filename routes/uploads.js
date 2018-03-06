@@ -23,7 +23,7 @@ var image_id = uuid.v4();
 
 
 
-route.delete("/uploads/:id", (req,res)=>{
+route.delete("/new/:id", (req,res)=>{
     //get the id from the ajax response
     //in this case the id is the name of the image
     //we need it in order to delete the image from the uploads directory
@@ -54,14 +54,14 @@ route.delete("/uploads/:id", (req,res)=>{
  
 
 //-----Manage the get requests.
-route.get("/uploads",function(req, res, next){
+route.get("/new",function(req, res, next){
    //find the images inside mongodb
    Image.find({},function(err, images){
        if(err){
            console.log(err);
        }else{
            //return the array of images found.
-           res.render("uploads", {
+           res.render("new", {
                images: images
            });
        } 
@@ -72,7 +72,7 @@ route.get("/uploads",function(req, res, next){
 
 
 //-----Manage the post requests.
-route.post("/uploads",function(req ,res, next){
+route.post("/new",function(req ,res, next){
     //let multer manage the requests
     //which are passed to the upload function
     //by the main request.
@@ -83,15 +83,10 @@ route.post("/uploads",function(req ,res, next){
 
     // ---------- MULTER UPLOAD FUNCTION -------------
     upload(req, res, function (err) {
-        if(err){
-            res.render('main',{
-                msg : 'this is error'
-            });
-        }else 
         // need to check if the req.file is set.
         if(req.file == null || req.file == undefined || req.file == ""){
             //redirect to the same url            
-            res.redirect("/");
+            res.redirect('/');
             console.log('hello world');   
             // res.render('main',{
             //     mgs : 'error'
@@ -123,7 +118,7 @@ route.post("/uploads",function(req ,res, next){
                     }else{
                         //render the view again 
                         // console.log(req.body);   
-                        res.redirect("/uploads");
+                        res.redirect("/new");
         
                     }
                 });
@@ -138,16 +133,21 @@ route.post("/uploads",function(req ,res, next){
  
 });
 
-route.post('/images/:id',function(req, res){
-    Image.findById(req.params.id, function(err, image){
+
+
+// route.post('/images/:id',function(req, res){
+//     Image.findById(req.params.id, function(err, image){
         
-               res.render('image', {
-                 image:image
+//                res.render('image', {
+//                  image:image
                 
-               });
-               console.log(image.image);
-       });
-   });
+//                });
+//                console.log(image.image);
+//        });
+//    });
+
+
+ 
 
 //export the module
 module.exports = route;

@@ -70,15 +70,7 @@ form input[type="submit"]{
     width: 100%;
 }
 
-.delete {
-    display: block;
-    position: absolute;
-    background: red;
-    color: #eee;
-    padding: 10px;
-    left: 0;
-    cursor: pointer;
-}
+
 @keyframes slideDown {
     0% {opacity: 0;transform: translateY(-20px); };
     100%{opacity:1;transform: translateY(0px); }

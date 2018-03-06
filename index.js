@@ -41,6 +41,7 @@ server.set("view engine", "pug");
 server.use("/", main);
 server.use("/", uploads);
 
+
 //create the server
 server.listen(3000, ()=>{
     console.log("Server is running @ localhost:3000");

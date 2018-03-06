@@ -43,7 +43,7 @@ server.use("/", uploads);
 
 
 //create the server
-server.listen(3000, ()=>{
+server.listen(3000,function(){
     console.log("Server is running @ localhost:3000");
 });
 

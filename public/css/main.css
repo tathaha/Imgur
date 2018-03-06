@@ -16,7 +16,7 @@ body{
 }
 
 a {
-    color: #04FF5C;
+    color: rgb(255, 196, 4);
 }
 
 form {
@@ -31,12 +31,12 @@ form input {
     border:none;
     margin-bottom: 10px;
     background: none;
-    border-bottom:1px solid #04FF5C;
+    border-bottom:1px solid rgb(5, 7, 6);
     padding: 10px;
 }
 
 form input[type="submit"]{
-    background: #04FF5C;
+    background: rgb(4, 255, 230);
     color: #111;
     border: none;
     width: 30%;

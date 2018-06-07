@@ -1,0 +1,61 @@
+
+  <!-- <div class="container"> -->
+         
+         
+         <div id = "menu">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="logo">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a class= "imgurlogo" href="/"><img src="/public/app/images/imgur_logo_pack/imgur-logo-transparent.png" height="42" width="120" alt=""></a></li>
+            <li>
+                <form action="/images" method="POST" enctype="multipart/form-data">
+            <div style="float: left;">
+                <input type="file" name="image"/>
+             </div>
+             <div style="float: left;">
+                <input type="submit" value="upload" style="height: 40px;" class="waves-effect waves-light btn"/>
+               </div>
+                </form>
+            </li>
+            </ul>
+          </div>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/"><i class="material-icons left">search</i></a></li>
+            <li><a href="/">sign in</a></li>
+            <li><a href="/">sign up</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div> 
+  
+    <div class="header section">
+      <span class="before-text">The</span>
+      <span class="name"><a href="">Most Viral</a></span>
+      <span class="middle-text">images on the Internet, sorted by</span>
+      <span class="selection"><a href="">popularity</a></span>
+    </div>
+    <div class="content">
+      <div class="card"><img src="/public/app/images/demo/law_abiding_citizen.jpg" alt=""></div>
+      <div class="card"><img src="/public/app/images/demo/rio.jpg" alt=""></div>
+      <div class="card"><img src="/public/app/images/demo/real_steel.jpg" alt=""></div>
+
+     {{#each images}}
+            <div class="card" >
+                <a href="/images/{{ uniqueId }}">
+                    <img src="/public/uploads/{{ filename }}" alt="{{ title }}" style="width: 170px; height: 210px;">
+                </a>
+            </div>
+        {{/each}}
+         
+        
+    </div>
+    
+
+  <!-- </div> -->
+
+
+
+  
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->

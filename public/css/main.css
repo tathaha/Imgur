@@ -7,7 +7,41 @@ body{
 .container {
    
 }
-
+#nametxt{
+    color:rebeccapurple;
+}
+.sub{
+    color: black;
+    position: relative;
+    right: 133px;
+}
+#post{
+    color: black;
+}
+.forms{
+    color: #111;
+    position: relative;
+    width: 243px;
+    right: 133px
+}
+#comment-btn{
+    position: relative;
+    width: 117px;
+    left: 190px;
+    top: 33px;
+}
+#btn-delete{
+    width: 70px;
+    background-color: #ae2c2c;
+}
+#btn-comment{
+    width: 240px;
+    position: relative;
+    right: 73px;
+}
+.media-body{
+    color: #111;
+}
 .container h1 {
     color: rgb(0, 0, 0);
     font-size: 4rem;

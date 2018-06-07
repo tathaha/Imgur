@@ -1,0 +1,93 @@
+   <div id = "menu">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="logo">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a class= "imgurlogo" href="/"><img src="/public/app/images/imgur_logo_pack/imgur-logo-transparent.png" height="42" width="120" alt=""></a></li></ul>
+       </div>
+      </nav>
+    </div> 
+    <br />
+<div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      
+    </div>
+    <div class="panel-body">
+     
+        <div class="col-md-12 text-center">
+            <img src="/public/uploads/{{image.filename}}" class="img-thumbnail">
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col-md-8">
+             <div id="post">
+              Posted:   <em class="text-muted">{{ timeago image.timestamp }}</em>
+            </div>
+            </div>
+            <div class="col-md-4 text-right">
+                <button class="btn btn-danger" id="btn-delete" data-id="{{ image.uniqueId }}"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-md-8">
+                <strong class="panel-title">Comments</strong>
+            </div>
+            <div class="col-md-4 text-right">
+                <button class="btn btn-default btn-sm" id="btn-comment" data-id="{{ image.uniqueId }}"><i class="fa fa-comments-o"> Post Comment...</i></button>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <blockquote id="post-comment">
+            <div class="row">
+                <form method="post" id="comment" action="/images/{{ image.uniqueId }}/comment">
+                    <div class="titles">
+                        <label class="sub" for="name">Name:</label>
+                        <input class="forms"  type="text" name="name">
+                     </div>
+                    <div class="titles">
+                        <label class="sub" for="email">Email:</label>
+                        <input class="forms" type="text" name="email">
+                    </div>
+                    <div class="titles">
+                        <label class="sub" for="comment">Comment:</label>
+                        <textarea class="forms" name="comment" rows="2"></textarea>
+                    </div>
+                    <div class="titles">
+                        <button type="submit" id="comment-btn" class="btn btn-success" type="button"><i class="fa fa-comment"></i> Post</button>
+                    </div>
+                </form>
+            </div>
+        </blockquote>
+        <ul class="media-list">
+            {{#each comments}}
+            <li class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object img-circle" src="http://www.gravatar.com/avatar/{{gravatar}}?d=monsterid&s=45">
+                </a>
+                <div class="media-body">
+                    {{ comment }}
+                    <br/><strong class="media-heading">{{ name }}</strong> <small class="text-muted">{{ timeago timestamp }}</small>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+
+    </div>
+</div>
+  
+                </div>
+            
+            </div>
+        </div>

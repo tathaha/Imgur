@@ -6,7 +6,7 @@
 
 ### Installation
 
-Install the dependencies
+Install all dependencies
 
 ```sh
 $ npm install

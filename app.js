@@ -15,7 +15,7 @@ app = config(app);
 
 // Fix mongoose deprecation warning
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://chiraitori:<password>@cluster0.9ha2n.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('mongodb://mongo:jpYjCsSzxU2lWADDih8f@containers-us-west-53.railway.app:6720');
 mongoose.connection.on('open', function(){
   console.log('Mongoose connected');
 })
